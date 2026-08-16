@@ -4,6 +4,12 @@ Este pacote conecta o Claude Desktop diretamente ao seu CRM (EnturOS), para voc�
 poder pedir coisas como "liste meus contatos", "crie uma negociação para o cliente X"
 ou "mostre o resumo de vendas do mês" direto no chat.
 
+## Baixar
+
+**[⬇️ Clique aqui para baixar o arquivo `enturos-crm-mcp.mcpb`](https://raw.githubusercontent.com/RenanhvBorges/enturOS_mcp/main/enturos-crm-mcp.mcpb)**
+
+É o único arquivo que você precisa. Depois de baixado, siga o passo a passo abaixo.
+
 ## O que você precisa antes de começar
 
 1. Ter o **Claude Desktop** instalado no computador (baixe em claude.ai/download, se ainda não tiver).
