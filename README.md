@@ -62,6 +62,11 @@ negociação como perdida, etc.) sempre pedem sua confirmação antes de o Claud
   específica. Peça ao administrador do CRM para ajustar os escopos da chave no painel.
 - **Nada acontece ao clicar no arquivo `.mcpb`**: confirme que o Claude Desktop está
   instalado e atualizado (Ajuda > Verificar atualizações).
+- **Erro de rede citando DNS (ex: "nodename nor servname provided")**: o endereço da
+  API do CRM não foi encontrado na internet — normalmente indica que o endereço mudou do
+  lado do EnturOS. Vá em Configurações > Extensões > EnturOS CRM no Claude Desktop e
+  confira o campo avançado "Endereço da API (avançado)": ele deve ser
+  `https://crm.enturos.com/api/v1`, a menos que o suporte do EnturOS informe outro.
 
 ## Segurança
 

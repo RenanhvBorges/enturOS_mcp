@@ -63,7 +63,9 @@ async def api_request(
             ) from e
         except httpx.RequestError as e:
             raise EnturOSAPIError(
-                f"Erro de rede ao chamar a API do EnturOS CRM: {e}"
+                f"Erro de rede ao chamar a API do EnturOS CRM em {config.API_BASE_URL}: {e}. "
+                "Se o erro mencionar DNS/nome do servidor, confira se ENTUROS_API_BASE_URL "
+                "está correto (verifique com o suporte do EnturOS qual é o endereço atual da API)."
             ) from e
 
     if response.status_code == 401:

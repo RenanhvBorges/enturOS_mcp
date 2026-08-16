@@ -2,7 +2,7 @@
   "manifest_version": "0.4",
   "name": "enturos-crm-mcp",
   "display_name": "EnturOS CRM",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Conecta o Claude ao CRM EnturOS: contatos, negociações, propostas, tarefas, analytics e muito mais.",
   "long_description": "Este conector dá ao Claude acesso completo à API do EnturOS CRM (https://crm.enturos.com): contatos, negociações (deals), contas B2B, propostas comerciais, funis e etapas, catálogo de produtos, tarefas, tags, notas, analytics/KPIs, RFV (lead scoring), segmentos, campos personalizados e webhooks. Basta colar a chave de API do CRM (gerada no painel do EnturOS) durante a instalação.",
   "author": {
@@ -15,7 +15,8 @@
       "command": "uv",
       "args": ["run", "--directory", "${__dirname}", "run_server.py"],
       "env": {
-        "ENTUROS_API_KEY": "${user_config:enturos_api_key}"
+        "ENTUROS_API_KEY": "${user_config:enturos_api_key}",
+        "ENTUROS_API_BASE_URL": "${user_config:enturos_api_base_url}"
       }
     }
   },
@@ -26,6 +27,13 @@
       "description": "Cole aqui a chave gerada no painel do EnturOS CRM, em Configurações > API (formato enturos_live_... ou enturos_test_...).",
       "required": true,
       "sensitive": true
+    },
+    "enturos_api_base_url": {
+      "type": "string",
+      "title": "Endereço da API (avançado)",
+      "description": "Só altere se o suporte do EnturOS pedir. Endereço base da API do CRM.",
+      "required": false,
+      "default": "https://crm.enturos.com/api/v1"
     }
   },
   "compatibility": {
