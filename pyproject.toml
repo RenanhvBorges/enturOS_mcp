@@ -1,0 +1,20 @@
+[project]
+name = "enturos-mcp"
+version = "0.1.0"
+description = "Servidor MCP para o EnturOS CRM (https://crm.enturos.com/api/v1/docs)"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.6.0,<2.0.0",
+    "httpx>=0.27",
+    "pydantic>=2.6",
+]
+
+[project.scripts]
+enturos-mcp = "enturos_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["enturos_mcp"]
