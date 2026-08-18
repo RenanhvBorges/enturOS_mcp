@@ -18,3 +18,9 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["enturos_mcp"]
+
+[tool.uv]
+# Usa o cofre de certificados do sistema operacional em vez do cofre interno do uv.
+# Necessário em máquinas Windows com antivírus/proxy corporativo que inspeciona HTTPS
+# (o certificado injetado por eles não é reconhecido pelo cofre interno do uv).
+native-tls = true

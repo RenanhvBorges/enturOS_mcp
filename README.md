@@ -75,9 +75,10 @@ negociação como perdida, etc.) sempre pedem sua confirmação antes de o Claud
   `https://crm.enturos.com/api/v1`, a menos que o suporte do EnturOS informe outro.
 - **Falha na instalação citando "invalid peer certificate" / "UnknownIssuer" (comum em
   Windows corporativo com antivírus)**: acontece quando um antivírus ou proxy da empresa
-  inspeciona o tráfego HTTPS. A partir da versão 0.3.0 deste pacote isso já vem corrigido
-  automaticamente — baixe a versão mais recente do `enturos-crm-mcp.mcpb` e instale de
-  novo. Se persistir, pode ser necessário que o time de TI libere o acesso a
+  inspeciona o tráfego HTTPS. A partir da versão 0.3.1 deste pacote isso já vem corrigido
+  automaticamente — baixe a versão mais recente do `enturos-crm-mcp.mcpb`, remova a
+  extensão antiga em Configurações > Extensões (para limpar a instalação incompleta) e
+  instale de novo. Se persistir, pode ser necessário que o time de TI libere o acesso a
   `pypi.org` e `files.pythonhosted.org` no antivírus/firewall.
 
 ## Segurança
